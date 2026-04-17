@@ -1,0 +1,225 @@
+/usr/local/miniconda3/envs/py312/lib/python3.12/site-packages/sglang/launch_server.py:51: UserWarning: 'python -m sglang.launch_server' is still supported, but 'sglang serve' is the recommended entrypoint.
+  Example: sglang serve --model-path <model> [options]
+  warnings.warn(
+Cuda graph is disabled for prefill server when piecewise cuda graph is not enabled.
+No IB devices specified for Mooncake backend, falling back to auto discovery.
+/usr/local/miniconda3/envs/py312/lib/python3.12/site-packages/sglang/srt/entrypoints/http_server.py:172: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
+  from sglang.srt.utils.json_response import (
+[2026-04-16 19:36:55] server_args=ServerArgs(model_path='/root/.cache/modelscope/hub/models/LLM-Research/Meta-Llama-3.1-8B-Instruct', tokenizer_path='/root/.cache/modelscope/hub/models/LLM-Research/Meta-Llama-3.1-8B-Instruct', tokenizer_mode='auto', tokenizer_worker_num=1, skip_tokenizer_init=False, load_format='auto', model_loader_extra_config='{}', trust_remote_code=False, context_length=None, is_embedding=False, enable_multimodal=None, revision=None, model_impl='auto', host='127.0.0.1', port=30000, fastapi_root_path='', grpc_mode=False, skip_server_warmup=False, warmups=None, nccl_port=None, checkpoint_engine_wait_weights_before_ready=False, ssl_keyfile=None, ssl_certfile=None, ssl_ca_certs=None, ssl_keyfile_password=None, enable_ssl_refresh=False, dtype='auto', quantization=None, quantization_param_path=None, kv_cache_dtype='auto', enable_fp32_lm_head=False, modelopt_quant=None, modelopt_checkpoint_restore_path=None, modelopt_checkpoint_save_path=None, modelopt_export_path=None, quantize_and_serve=False, rl_quant_profile=None, mem_fraction_static=0.837, max_running_requests=None, max_queued_requests=None, max_total_tokens=None, chunked_prefill_size=2048, enable_dynamic_chunking=False, max_prefill_tokens=16384, prefill_max_requests=None, schedule_policy='fcfs', enable_priority_scheduling=False, disable_priority_preemption=False, default_priority_value=None, abort_on_priority_when_disabled=False, schedule_low_priority_values_first=False, priority_scheduling_preemption_threshold=10, schedule_conservativeness=1.0, page_size=1, swa_full_tokens_ratio=0.8, disable_hybrid_swa_memory=False, radix_eviction_policy='lru', enable_prefill_delayer=False, prefill_delayer_max_delay_passes=30, prefill_delayer_token_usage_low_watermark=None, prefill_delayer_forward_passes_buckets=None, prefill_delayer_wait_seconds_buckets=None, device='cuda', tp_size=1, pp_size=1, pp_max_micro_batch_size=None, pp_async_batch_depth=0, stream_interval=1, stream_response_default_include_usage=False, incremental_streaming_output=False, enable_streaming_session=False, random_seed=852002405, constrained_json_whitespace_pattern=None, constrained_json_disable_any_whitespace=False, watchdog_timeout=300, soft_watchdog_timeout=None, dist_timeout=None, download_dir=None, model_checksum=None, base_gpu_id=0, gpu_id_step=1, sleep_on_idle=False, use_ray=False, custom_sigquit_handler=None, log_level='info', log_level_http=None, log_requests=False, log_requests_level=2, log_requests_format='text', log_requests_target=None, uvicorn_access_log_exclude_prefixes=[], crash_dump_folder=None, show_time_cost=False, enable_metrics=False, enable_mfu_metrics=False, enable_metrics_for_all_schedulers=False, tokenizer_metrics_custom_labels_header='x-custom-labels', tokenizer_metrics_allowed_custom_labels=None, extra_metric_labels=None, bucket_time_to_first_token=None, bucket_inter_token_latency=None, bucket_e2e_request_latency=None, collect_tokens_histogram=False, prompt_tokens_buckets=None, generation_tokens_buckets=None, gc_warning_threshold_secs=0.0, decode_log_interval=40, enable_request_time_stats_logging=False, kv_events_config=None, enable_trace=False, otlp_traces_endpoint='localhost:4317', export_metrics_to_file=False, export_metrics_to_file_dir=None, api_key=None, admin_api_key=None, served_model_name='LLM-Research/Meta-Llama-3.1-8B-Instruct', weight_version='default', chat_template=None, hf_chat_template_name=None, completion_template=None, file_storage_path='sglang_storage', enable_cache_report=False, reasoning_parser=None, tool_call_parser=None, tool_server=None, sampling_defaults='model', dp_size=1, load_balance_method='follow_bootstrap_room', attn_cp_size=1, moe_dp_size=1, dist_init_addr=None, nnodes=1, node_rank=0, json_model_override_args='{}', preferred_sampling_params=None, enable_lora=None, enable_lora_overlap_loading=None, max_lora_rank=None, lora_target_modules=None, lora_paths=None, max_loaded_loras=None, max_loras_per_batch=8, lora_eviction_policy='lru', lora_backend='csgmv', max_lora_chunk_size=16, experts_shared_outer_loras=None, attention_backend='flashinfer', decode_attention_backend=None, prefill_attention_backend=None, sampling_backend='flashinfer', grammar_backend='xgrammar', mm_attention_backend=None, fp8_gemm_runner_backend='auto', fp4_gemm_runner_backend='auto', nsa_prefill_backend=None, nsa_decode_backend=None, disable_flashinfer_autotune=False, mamba_backend='triton', speculative_algorithm=None, speculative_draft_model_path=None, speculative_draft_model_revision=None, speculative_draft_load_format=None, speculative_num_steps=None, speculative_eagle_topk=None, speculative_num_draft_tokens=None, speculative_accept_threshold_single=1.0, speculative_accept_threshold_acc=1.0, speculative_token_map=None, speculative_attention_mode='prefill', speculative_draft_attention_backend=None, speculative_moe_runner_backend='auto', speculative_moe_a2a_backend=None, speculative_draft_model_quantization=None, speculative_ngram_min_bfs_breadth=1, speculative_ngram_max_bfs_breadth=10, speculative_ngram_match_type='BFS', speculative_ngram_max_trie_depth=18, speculative_ngram_capacity=10000000, enable_multi_layer_eagle=False, ep_size=1, moe_a2a_backend='none', moe_runner_backend='auto', flashinfer_mxfp4_moe_precision='default', enable_flashinfer_allreduce_fusion=False, enforce_disable_flashinfer_allreduce_fusion=False, enable_aiter_allreduce_fusion=False, deepep_mode='auto', ep_num_redundant_experts=0, ep_dispatch_algorithm=None, init_expert_location='trivial', enable_eplb=False, eplb_algorithm='auto', eplb_rebalance_num_iterations=1000, eplb_rebalance_layers_per_chunk=None, eplb_min_rebalancing_utilization_threshold=1.0, expert_distribution_recorder_mode=None, expert_distribution_recorder_buffer_size=1000, enable_expert_distribution_metrics=False, deepep_config=None, moe_dense_tp_size=None, elastic_ep_backend=None, enable_elastic_expert_backup=False, mooncake_ib_device=None, max_mamba_cache_size=None, mamba_ssm_dtype=None, mamba_full_memory_ratio=0.9, mamba_scheduler_strategy='no_buffer', mamba_track_interval=256, linear_attn_backend='triton', linear_attn_decode_backend=None, linear_attn_prefill_backend=None, enable_hierarchical_cache=False, hicache_ratio=2.0, hicache_size=0, hicache_write_policy='write_through', hicache_io_backend='kernel', hicache_mem_layout='layer_first', hicache_storage_backend=None, hicache_storage_prefetch_policy='best_effort', hicache_storage_backend_extra_config=None, enable_hisparse=False, hisparse_config=None, enable_lmcache=False, kt_weight_path=None, kt_method='AMXINT4', kt_cpuinfer=None, kt_threadpool_count=2, kt_num_gpu_experts=None, kt_max_deferred_experts_per_token=None, dllm_algorithm=None, dllm_algorithm_config=None, enable_double_sparsity=False, ds_channel_config_path=None, ds_heavy_channel_num=32, ds_heavy_token_num=256, ds_heavy_channel_type='qk', ds_sparse_decode_threshold=4096, cpu_offload_gb=0, offload_group_size=-1, offload_num_in_group=1, offload_prefetch_step=1, offload_mode='cpu', multi_item_scoring_delimiter=None, disable_radix_cache=True, cuda_graph_max_bs=24, cuda_graph_bs=[1, 2, 4, 8, 12, 16, 24], disable_cuda_graph=True, disable_cuda_graph_padding=False, enable_profile_cuda_graph=False, enable_cudagraph_gc=False, enable_layerwise_nvtx_marker=False, enable_nccl_nvls=False, enable_symm_mem=False, disable_flashinfer_cutlass_moe_fp4_allgather=False, enable_tokenizer_batch_encode=False, disable_tokenizer_batch_decode=False, disable_outlines_disk_cache=False, disable_custom_all_reduce=False, enable_mscclpp=False, enable_torch_symm_mem=False, pre_warm_nccl=False, disable_overlap_schedule=False, enable_mixed_chunk=False, enable_dp_attention=False, enable_dp_lm_head=False, enable_two_batch_overlap=False, enable_single_batch_overlap=False, tbo_token_distribution_threshold=0.48, enable_torch_compile=False, disable_piecewise_cuda_graph=True, enforce_piecewise_cuda_graph=False, enable_torch_compile_debug_mode=False, torch_compile_max_bs=32, piecewise_cuda_graph_max_tokens=2048, piecewise_cuda_graph_tokens=[4, 8, 12, 16, 20, 24, 28, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 288, 320, 352, 384, 416, 448, 480, 512, 576, 640, 704, 768, 832, 896, 960, 1024, 1280, 1536, 1792, 2048], piecewise_cuda_graph_compiler='eager', torchao_config='', enable_nan_detection=False, enable_p2p_check=False, triton_attention_reduce_in_fp32=False, triton_attention_num_kv_splits=8, triton_attention_split_tile_size=None, num_continuous_decode_steps=1, delete_ckpt_after_loading=False, enable_memory_saver=False, enable_weights_cpu_backup=False, enable_draft_weights_cpu_backup=False, allow_auto_truncate=False, enable_custom_logit_processor=False, flashinfer_mla_disable_ragged=False, disable_shared_experts_fusion=False, disable_chunked_prefix_cache=False, disable_fast_image_processor=False, keep_mm_feature_on_device=False, enable_return_hidden_states=False, enable_return_routed_experts=False, scheduler_recv_interval=1, numa_node=None, enable_deterministic_inference=False, rl_on_policy_target=None, enable_attn_tp_input_scattered=False, gc_threshold=None, enable_nsa_prefill_context_parallel=False, nsa_prefill_cp_mode='round-robin-split', enable_fused_qk_norm_rope=False, enable_precise_embedding_interpolation=False, enable_fused_moe_sum_all_reduce=False, enable_prefill_context_parallel=False, prefill_cp_mode='in-seq-split', enable_dynamic_batch_tokenizer=False, dynamic_batch_tokenizer_batch_size=32, dynamic_batch_tokenizer_batch_timeout=0.002, debug_tensor_dump_output_folder=None, debug_tensor_dump_layers=None, debug_tensor_dump_input_file=None, debug_tensor_dump_inject=False, disaggregation_mode='prefill', disaggregation_transfer_backend='mooncake', disaggregation_bootstrap_port=8998, disaggregation_ib_device=None, disaggregation_decode_enable_offload_kvcache=False, num_reserved_decode_tokens=512, disaggregation_decode_polling_interval=1, encoder_only=False, language_only=False, encoder_transfer_backend='zmq_to_scheduler', encoder_urls=[], enable_adaptive_dispatch_to_encoder=False, custom_weight_loader=[], weight_loader_disable_mmap=False, remote_instance_weight_loader_seed_instance_ip=None, remote_instance_weight_loader_seed_instance_service_port=None, remote_instance_weight_loader_send_weights_group_ports=None, remote_instance_weight_loader_backend='nccl', remote_instance_weight_loader_start_seed_via_transfer_engine=False, engine_info_bootstrap_port=6789, modelexpress_config=None, enable_pdmux=False, pdmux_config_path=None, sm_group_num=8, enable_broadcast_mm_inputs_process=False, enable_prefix_mm_cache=False, mm_enable_dp_encoder=False, mm_process_config={}, limit_mm_data_per_request=None, enable_mm_global_cache=False, decrypted_config_file=None, decrypted_draft_config_file=None, forward_hooks=None)
+[2026-04-16 19:36:57] CommonKVBootstrapServer started successfully on 127.0.0.1:8998
+[2026-04-16 19:36:57] Using default HuggingFace chat template with detected content format: string
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W0416 19:37:08.345975 36129 transfer_engine_py.cpp:77] Using default malloc/free for protocol: rdma
+I0416 19:37:08.346064 36129 transfer_engine_impl.cpp:597] Metrics reporting is disabled (set MC_TE_METRIC=1 to enable)
+I0416 19:37:08.346076 36129 transfer_engine_impl.cpp:105] Transfer Engine parseHostNameWithPort. server_name: 10.60.54.122 port: 12001
+I0416 19:37:08.346155 36129 transfer_engine_impl.cpp:172] Transfer Engine RPC using P2P handshake, listening on 10.60.54.122:16723
+I0416 19:37:08.346290 36129 transfer_engine_impl.cpp:227] Auto-discovering topology...
+W0416 19:37:08.346391 36129 topology.cpp:152] No RDMA devices found, check your device installation
+I0416 19:37:08.349999 36129 transfer_engine_impl.cpp:242] Topology discovery complete. Found 0 HCAs.
+I0416 19:37:08.350049 36129 tcp_transport.cpp:530] TcpTransport: listen on port 16929
+[2026-04-16 19:37:08] Init torch distributed begin.
+[W416 19:37:36.401057051 socket.cpp:209] [c10d] The hostname of the client socket cannot be retrieved. err=-3
+[rank0]:[W416 19:37:36.457518653 ProcessGroupGloo.cpp:516] Warning: Unable to resolve hostname to a (local) address. Using the loopback address as fallback. Manually set the network interface to bind to with GLOO_SOCKET_IFNAME. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[2026-04-16 19:37:36] Init torch distributed ends. elapsed=28.41 s, mem usage=0.06 GB
+[2026-04-16 19:37:38] Load weight begin. avail mem=21.56 GB
+Multi-thread loading shards:   0% Completed | 0/4 [00:00<?, ?it/s]Multi-thread loading shards:  25% Completed | 1/4 [00:00<00:02,  1.30it/s]Multi-thread loading shards:  50% Completed | 2/4 [00:01<00:01,  1.79it/s]Multi-thread loading shards:  75% Completed | 3/4 [00:01<00:00,  1.50it/s]Multi-thread loading shards: 100% Completed | 4/4 [00:02<00:00,  1.24it/s]Multi-thread loading shards: 100% Completed | 4/4 [00:02<00:00,  1.34it/s]
+[2026-04-16 19:37:41] Load weight end. elapsed=3.41 s, type=LlamaForCausalLM, avail mem=6.52 GB, mem usage=15.04 GB.
+[2026-04-16 19:37:41] Using KV cache dtype: torch.bfloat16
+[2026-04-16 19:37:41] KV Cache is allocated. #tokens: 24430, K size: 1.49 GB, V size: 1.49 GB
+[2026-04-16 19:37:41] Memory pool end. avail mem=2.53 GB
+[2026-04-16 19:37:41] Disable piecewise CUDA graph because --disable-piecewise-cuda-graph is set
+[2026-04-16 19:37:44] max_total_num_tokens=24430, chunked_prefill_size=2048, max_prefill_tokens=16384, max_running_requests=2048, context_len=131072, available_gpu_mem=2.11 GB
+[2026-04-16 19:37:45] INFO:     Started server process [35987]
+[2026-04-16 19:37:45] INFO:     Waiting for application startup.
+[2026-04-16 19:37:45] Using default chat sampling params from model generation config: {'temperature': 0.6, 'top_p': 0.9}
+[2026-04-16 19:37:45] INFO:     Application startup complete.
+[2026-04-16 19:37:45] INFO:     Uvicorn running on http://127.0.0.1:30000 (Press CTRL+C to quit)
+[2026-04-16 19:37:46] INFO:     127.0.0.1:60434 - "GET /model_info HTTP/1.1" 200 OK
+[2026-04-16 19:37:46] Start of pd disaggregation warmup ...
+[2026-04-16 19:37:46] INFO:     127.0.0.1:60452 - "GET /health HTTP/1.1" 503 Service Unavailable
+/usr/local/miniconda3/envs/py312/lib/python3.12/site-packages/fastapi/routing.py:120: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
+  response = await f(request)
+[2026-04-16 19:37:46] INFO:     127.0.0.1:60460 - "GET /v1/models HTTP/1.1" 200 OK
+2026-04-16 19:37:47,008 - CUTE_DSL - WARNING - [handle_import_error] - Unexpected error during package walk: cutlass.cute.experimental
+[2026-04-16 19:37:47] Unexpected error during package walk: cutlass.cute.experimental
+[2026-04-16 19:37:48] Prefill batch, #new-seq: 1, #new-token: 4, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 0.00
+[2026-04-16 19:37:48] INFO:     127.0.0.1:60440 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:37:48] End of prefill disaggregation mode warmup with status 200, resp: [{'text': ' The', 'output_ids': [578], 'meta_info': {'id': '7634c8c9799a4be4b96383cbaa479f8b', 'finish_reason': {'type': 'length', 'length': 0}, 'prompt_tokens': 4, 'weight_version': 'default', 'total_retractions': 0, 'reasoning_tokens': 0, 'completion_tokens': 1, 'cached_tokens': 0, 'cached_tokens_details': None, 'dp_rank': None, 'e2e_latency': 2.016262127999653, 'response_sent_to_client_ts': 1776368268.1775553}}]
+[2026-04-16 19:37:48] The server is fired up and ready to roll!
+[2026-04-16 19:37:48] INFO:     127.0.0.1:60464 - "PRI %2A HTTP/2.0" 404 Not Found
+[2026-04-16 19:37:48] WARNING:  Invalid HTTP request received.
+[2026-04-16 19:37:48] INFO:     127.0.0.1:60472 - "PRI %2A HTTP/2.0" 404 Not Found
+[2026-04-16 19:37:48] WARNING:  Invalid HTTP request received.
+[2026-04-16 19:37:48] Prefill batch, #new-seq: 1, #new-token: 1, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 13.38
+[2026-04-16 19:37:49] INFO:     127.0.0.1:60462 - "GET /health HTTP/1.1" 200 OK
+[2026-04-16 19:37:49] INFO:     127.0.0.1:60476 - "GET /server_info HTTP/1.1" 200 OK
+[2026-04-16 19:37:49] INFO:     127.0.0.1:60476 - "GET /model_info HTTP/1.1" 200 OK
+[2026-04-16 19:38:06] INFO:     127.0.0.1:33164 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:06] Prefill batch, #new-seq: 1, #new-token: 123, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 0, #inflight-req: 1, cuda graph: False, input throughput (token/s): 0.06
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33164 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33176 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33180 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33188 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33198 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33202 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33218 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33210 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33208 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33226 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33432 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33258 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] Prefill batch, #new-seq: 1, #new-token: 123, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 6, #inflight-req: 1, cuda graph: False, input throughput (token/s): 69.34
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33398 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33250 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33236 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33292 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33380 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33350 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33394 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33254 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33460 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33448 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33352 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33256 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33294 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33334 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33264 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33346 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33414 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33252 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33426 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33424 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33290 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33438 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33446 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33404 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33468 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33472 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33478 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33486 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33496 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33498 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33500 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33506 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33516 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33522 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33524 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33536 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33548 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33558 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33560 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33574 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33586 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33590 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33604 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33612 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33616 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33626 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33634 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33638 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33648 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33656 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33668 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33682 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33688 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33694 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33702 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33712 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33728 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33730 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33744 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33748 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33754 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33764 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33766 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33780 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33782 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33796 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33798 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33800 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33834 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] Prefill batch, #new-seq: 6, #new-token: 637, #cached-token: 0, token usage: 0.11, #running-req: 0, #queue-req: 5, #prealloc-req: 14, #inflight-req: 6, cuda graph: False, input throughput (token/s): 1208.42
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33840 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33852 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33868 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33862 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33890 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33876 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33896 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33906 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33916 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33920 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33922 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33930 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33940 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33952 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33946 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33968 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33980 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33988 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] INFO:     127.0.0.1:33994 - "POST /generate HTTP/1.1" 200 OK
+[2026-04-16 19:38:08] Prefill batch, #new-seq: 16, #new-token: 2048, #cached-token: 0, token usage: 0.19, #running-req: 0, #queue-req: 0, #prealloc-req: 46, #inflight-req: 21, cuda graph: False, input throughput (token/s): 2592.11
+[2026-04-16 19:38:08] Prefill batch, #new-seq: 15, #new-token: 2048, #cached-token: 0, token usage: 0.18, #running-req: 0, #queue-req: 0, #prealloc-req: 63, #inflight-req: 32, cuda graph: False, input throughput (token/s): 10428.65
+[2026-04-16 19:38:08] Prefill batch, #new-seq: 1, #new-token: 43, #cached-token: 0, token usage: 0.13, #running-req: 0, #queue-req: 0, #prealloc-req: 63, #inflight-req: 21, cuda graph: False, input throughput (token/s): 720558.43
+[2026-04-16 19:38:08] Prefill batch, #new-seq: 1, #new-token: 184, #cached-token: 0, token usage: 0.13, #running-req: 0, #queue-req: 0, #prealloc-req: 61, #inflight-req: 19, cuda graph: False, input throughput (token/s): 490.85
+[2026-04-16 19:38:08] Prefill batch, #new-seq: 1, #new-token: 241, #cached-token: 0, token usage: 0.12, #running-req: 0, #queue-req: 0, #prealloc-req: 61, #inflight-req: 19, cuda graph: False, input throughput (token/s): 36076.81
+[2026-04-16 19:38:09] Prefill batch, #new-seq: 1, #new-token: 235, #cached-token: 0, token usage: 0.09, #running-req: 0, #queue-req: 0, #prealloc-req: 60, #inflight-req: 14, cuda graph: False, input throughput (token/s): 1588.04
+[2026-04-16 19:38:09] Prefill batch, #new-seq: 1, #new-token: 195, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 59, #inflight-req: 1, cuda graph: False, input throughput (token/s): 562.68
+[2026-04-16 19:38:09] Prefill batch, #new-seq: 1, #new-token: 74, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 58, #inflight-req: 1, cuda graph: False, input throughput (token/s): 4288.14
+[2026-04-16 19:38:09] Prefill batch, #new-seq: 1, #new-token: 98, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 57, #inflight-req: 1, cuda graph: False, input throughput (token/s): 2623.40
+[2026-04-16 19:38:09] Prefill batch, #new-seq: 1, #new-token: 56, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 56, #inflight-req: 1, cuda graph: False, input throughput (token/s): 823.75
+[2026-04-16 19:38:10] Prefill batch, #new-seq: 1, #new-token: 238, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 55, #inflight-req: 1, cuda graph: False, input throughput (token/s): 47.52
+[2026-04-16 19:38:10] Prefill batch, #new-seq: 1, #new-token: 187, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 54, #inflight-req: 1, cuda graph: False, input throughput (token/s): 4662.60
+[2026-04-16 19:38:10] Prefill batch, #new-seq: 1, #new-token: 238, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 53, #inflight-req: 1, cuda graph: False, input throughput (token/s): 3600.49
+[2026-04-16 19:38:10] Prefill batch, #new-seq: 1, #new-token: 235, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 52, #inflight-req: 2, cuda graph: False, input throughput (token/s): 7258.87
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 171, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 51, #inflight-req: 1, cuda graph: False, input throughput (token/s): 3484.83
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 76, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 50, #inflight-req: 1, cuda graph: False, input throughput (token/s): 2565.08
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 200, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 49, #inflight-req: 1, cuda graph: False, input throughput (token/s): 2202.90
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 24, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 48, #inflight-req: 1, cuda graph: False, input throughput (token/s): 4759.52
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 33, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 47, #inflight-req: 1, cuda graph: False, input throughput (token/s): 147.42
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 2, #new-token: 194, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 45, #inflight-req: 2, cuda graph: False, input throughput (token/s): 417.88
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 202, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 44, #inflight-req: 3, cuda graph: False, input throughput (token/s): 6051.25
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 115, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 43, #inflight-req: 1, cuda graph: False, input throughput (token/s): 4240.99
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 218, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 42, #inflight-req: 1, cuda graph: False, input throughput (token/s): 2033.71
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 211, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 40, #inflight-req: 1, cuda graph: False, input throughput (token/s): 2493.10
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 174, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 40, #inflight-req: 2, cuda graph: False, input throughput (token/s): 18135.61
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 199, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 39, #inflight-req: 1, cuda graph: False, input throughput (token/s): 2227.65
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 2, #new-token: 359, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 37, #inflight-req: 3, cuda graph: False, input throughput (token/s): 4538.57
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 191, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 36, #inflight-req: 2, cuda graph: False, input throughput (token/s): 10629.81
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 222, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 35, #inflight-req: 1, cuda graph: False, input throughput (token/s): 2424.70
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 2, #new-token: 222, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 32, #inflight-req: 3, cuda graph: False, input throughput (token/s): 4552.68
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 4, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 31, #inflight-req: 3, cuda graph: False, input throughput (token/s): 7180.83
+[2026-04-16 19:38:11] Prefill batch, #new-seq: 1, #new-token: 23, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 30, #inflight-req: 3, cuda graph: False, input throughput (token/s): 199.50
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 161, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 29, #inflight-req: 2, cuda graph: False, input throughput (token/s): 990.64
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 37, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 29, #inflight-req: 2, cuda graph: False, input throughput (token/s): 18193.31
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 244, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 28, #inflight-req: 1, cuda graph: False, input throughput (token/s): 392.84
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 205, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 27, #inflight-req: 1, cuda graph: False, input throughput (token/s): 2143.03
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 2, #new-token: 303, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 25, #inflight-req: 3, cuda graph: False, input throughput (token/s): 4644.06
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 60, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 24, #inflight-req: 1, cuda graph: False, input throughput (token/s): 3586.02
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 96, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 23, #inflight-req: 1, cuda graph: False, input throughput (token/s): 887.34
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 115, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 22, #inflight-req: 1, cuda graph: False, input throughput (token/s): 3372.02
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 188, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 21, #inflight-req: 1, cuda graph: False, input throughput (token/s): 675.76
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 208, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 20, #inflight-req: 1, cuda graph: False, input throughput (token/s): 5560.10
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 127, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 19, #inflight-req: 1, cuda graph: False, input throughput (token/s): 5076.98
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 182, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 18, #inflight-req: 1, cuda graph: False, input throughput (token/s): 1054.68
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 177, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 16, #inflight-req: 2, cuda graph: False, input throughput (token/s): 3441.84
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 1, #new-token: 86, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 16, #inflight-req: 2, cuda graph: False, input throughput (token/s): 25022.41
+[2026-04-16 19:38:12] Prefill batch, #new-seq: 2, #new-token: 321, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 14, #inflight-req: 3, cuda graph: False, input throughput (token/s): 1837.77
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 169, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 11, #inflight-req: 1, cuda graph: False, input throughput (token/s): 3801.40
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 2, #new-token: 289, #cached-token: 0, token usage: 0.03, #running-req: 0, #queue-req: 0, #prealloc-req: 10, #inflight-req: 3, cuda graph: False, input throughput (token/s): 4211.98
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 223, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 10, #inflight-req: 3, cuda graph: False, input throughput (token/s): 20361.45
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 186, #cached-token: 0, token usage: 0.04, #running-req: 0, #queue-req: 0, #prealloc-req: 8, #inflight-req: 4, cuda graph: False, input throughput (token/s): 3768.72
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 231, #cached-token: 0, token usage: 0.03, #running-req: 0, #queue-req: 0, #prealloc-req: 7, #inflight-req: 3, cuda graph: False, input throughput (token/s): 5333.79
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 67, #cached-token: 0, token usage: 0.03, #running-req: 0, #queue-req: 0, #prealloc-req: 5, #inflight-req: 3, cuda graph: False, input throughput (token/s): 6680.85
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 2, #new-token: 166, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 5, #inflight-req: 4, cuda graph: False, input throughput (token/s): 37578.19
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 115, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, #prealloc-req: 4, #inflight-req: 1, cuda graph: False, input throughput (token/s): 1853.47
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 196, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 3, #inflight-req: 1, cuda graph: False, input throughput (token/s): 1970.32
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 220, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 1, #inflight-req: 2, cuda graph: False, input throughput (token/s): 3875.74
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 118, #cached-token: 0, token usage: 0.02, #running-req: 0, #queue-req: 0, #prealloc-req: 0, #inflight-req: 2, cuda graph: False, input throughput (token/s): 6145.38
+[2026-04-16 19:38:13] Prefill batch, #new-seq: 1, #new-token: 162, #cached-token: 0, token usage: 0.01, #running-req: 0, #queue-req: 0, #prealloc-req: 0, #inflight-req: 2, cuda graph: False, input throughput (token/s): 53451.49
+[2026-04-16 19:38:18] SIGTERM received. signum=None frame=None. Draining requests and shutting down...
+[2026-04-16 19:38:19] Subprocess scheduler_0 (pid=36129) crashed with exit code -15. Triggering SIGQUIT for cleanup...
+[2026-04-16 19:38:19] SIGQUIT received. signum=None, frame=None. It usually means one child failed.
