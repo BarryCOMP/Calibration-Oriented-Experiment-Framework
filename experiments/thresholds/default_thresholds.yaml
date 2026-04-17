@@ -1,0 +1,10 @@
+version: "v1"
+rules:
+  max_runner_duration_regression_pct: 20.0
+  min_trace_coverage_ratio: 0.0
+  min_gpu_util_ratio_vs_baseline: 0.0
+  allow_new_groups: true
+  allow_missing_current_groups: false
+  require_metric_values: false
+  apply_only_profile_modes: false
+

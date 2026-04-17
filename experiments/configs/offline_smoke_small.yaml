@@ -1,0 +1,42 @@
+version: "v1"
+run_name: "offline_smoke_small"
+seed: 1
+output_root: "experiments/runs"
+
+global:
+  model_path: "LLM-Research/Meta-Llama-3.1-8B-Instruct"
+  tokenizer_path: null
+  use_modelscope: true
+  python_bin: "python3"
+  nsys_bin: "nsys"
+
+matrix:
+  scenario: ["offline"]
+  mode: ["baseline"]
+  dataset_name: ["random"]
+  num_prompts: [2]
+  random_input_len: [64]
+  random_output_len: [16]
+  random_range_ratio: [0.0]
+  mem_fraction_static: [0.70]
+  log_level: ["info"]
+  runs_per_case: 1
+
+constraints:
+  max_parallel_cases: 1
+  timeout_sec_per_case: 1200
+  retry:
+    max_attempts: 1
+    backoff_sec: 0
+
+profiling:
+  torch:
+    activities: ["GPU"]
+    start_step: 2
+    steps: 10
+  nsys:
+    trace: "cuda,nvtx"
+    sample: "none"
+    cpuctxsw: "none"
+    delay_sec: 0
+    duration_sec: 0

@@ -1,0 +1,51 @@
+version: "v1"
+run_name: "calibration_matrix_v1"
+seed: 1
+output_root: "experiments/runs"
+
+global:
+  model_path: "LLM-Research/Meta-Llama-3.1-8B-Instruct"
+  tokenizer_path: null
+  use_modelscope: true
+  python_bin: "python3"
+  nsys_bin: "nsys"
+
+matrix:
+  scenario: ["offline", "pd"]
+  mode: ["baseline", "torch", "nsys"]
+  dataset_name: ["random"]
+  num_prompts: [8, 20]
+  random_input_len: [128, 256]
+  random_output_len: [64, 128]
+  random_range_ratio: [0.0]
+  mem_fraction_static: [0.75, 0.85]
+  pd_host: ["127.0.0.1"]
+  pd_prefill_port: [30000]
+  pd_decode_port: [30001]
+  pd_router_port: [8000]
+  pd_prefill_cuda_devices: ["0"]
+  pd_decode_cuda_devices: ["1"]
+  pd_disable_radix_cache: [true]
+  pd_disable_cuda_graph: [true]
+  pd_request_rate: [inf]
+  pd_warmup_requests: [1]
+  runs_per_case: 1
+
+constraints:
+  max_parallel_cases: 1
+  timeout_sec_per_case: 3600
+  retry:
+    max_attempts: 1
+    backoff_sec: 0
+
+profiling:
+  torch:
+    activities: ["GPU"]
+    start_step: 5
+    steps: 30
+  nsys:
+    trace: "cuda,nvtx"
+    sample: "none"
+    cpuctxsw: "none"
+    delay_sec: 0
+    duration_sec: 0
